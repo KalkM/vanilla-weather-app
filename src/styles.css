@@ -5,9 +5,19 @@ body {
 h1 {
   color: #7c7c7c;
   font-size: 24px;
-  font-weight: 100;
+  font-weight: normal;
   line-height: 28px;
   margin: 0;
+}
+
+p {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+a {
+  font-weight: 100;
 }
 
 ul {
@@ -22,6 +32,10 @@ li {
   height: 19px;
   line-height: 1;
   list-style: none;
+}
+.weather-app-wrapper {
+  margin: 20px auto;
+  max-width: 600px;
 }
 
 .weather-app {
