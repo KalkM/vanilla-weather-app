@@ -61,4 +61,4 @@ let windElement = document.querySelector("#wind");
 let humidityElement = document.querySelector("#humidity");
 let weatherIconElement = document.querySelector("#weather-icon");
 
-searchCity("New York");
+searchCity("Addis Ababa");
