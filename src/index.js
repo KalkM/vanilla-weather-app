@@ -23,12 +23,18 @@ function formatDate(date) {
   return `${day} ${hours}:${minutes}`;
 }
 function displayWeather(response) {
+  console.log(response.data);
   let temperature = Math.round(response.data.main.temp);
   weatherType.innerHTML = response.data.weather[0].main;
   cityElement.innerHTML = response.data.name;
   tempElement.innerHTML = temperature;
   humidityElement.innerHTML = response.data.main.humidity;
   windElement.innerHTML = Math.round(response.data.wind.speed);
+  weatherIconElement.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
+  weatherIconElement.setAttribute("alt", response.data.weather[0].description);
 }
 function searchCity(city) {
   let apiKey = "c119ffef35b7245a5e03b6e5724ae961";
@@ -53,5 +59,6 @@ let weatherType = document.querySelector("#weather-type");
 let tempElement = document.querySelector("#temperature");
 let windElement = document.querySelector("#wind");
 let humidityElement = document.querySelector("#humidity");
+let weatherIconElement = document.querySelector("#weather-icon");
 
 searchCity("New York");

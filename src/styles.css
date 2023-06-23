@@ -46,7 +46,7 @@ li {
   max-width: 600px;
 }
 
-.weather-icon {
+#weather-icon {
   height: 64px;
   width: 64px;
   margin-right: 10px;
