@@ -16,7 +16,7 @@ function formatDate(date) {
     "Wednesday",
     "Thursday",
     "Friday",
-    "Saturday"
+    "Saturday",
   ];
   let day = days[dayIndex];
 
@@ -41,23 +41,9 @@ function search(event) {
   let city = document.querySelector("#city-input").value;
   searchCity(city);
 }
-function searchLocation(position) {
-  let apiKey = "c119ffef35b7245a5e03b6e5724ae961";
-  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${position.coords.latitude}&lon=${position.coords.longitude}&appid=${apiKey}&units=metric`;
-
-  axios.get(apiUrl).then(displayWeather);
-}
-
-function currentCity(event) {
-  event.preventDefault();
-  navigator.geolocation.getCurrentPosition(searchLocation);
-}
 
 let searchForm = document.querySelector("#search-form");
 searchForm.addEventListener("submit", search);
-
-let currentCityForm = document.querySelector("#current-location");
-currentCityForm.addEventListener("click", currentCity);
 
 let cityElement = document.querySelector("#city");
 let dateElement = document.querySelector("#date");
