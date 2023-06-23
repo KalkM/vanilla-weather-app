@@ -18,6 +18,7 @@ p {
 
 a {
   font-weight: 100;
+  color: rgb(33, 33, 33);
 }
 
 ul {
@@ -62,8 +63,18 @@ li {
 .units {
   position: relative;
   top: -34px;
+  text-decoration: none;
+  color: rgb(33, 33, 33);
 }
 
 .search-form {
   margin-bottom: 20px;
+}
+.weather-temperature .active {
+  color: rgb(33, 33, 33);
+  cursor: default;
+}
+
+.weather-temperature .active:hover {
+  text-decoration: none;
 }
